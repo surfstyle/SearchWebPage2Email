@@ -1,7 +1,10 @@
   
 # SearchWebPages2Email
-Web scaping notification for general web site configured in .json
+Web scaping of a website, search lines with specific keywords, notification (email) of new content. 
   
+It's personalized for more website using a configuration of a file .json (website + keywords)
+
+The main scope is scraping not-smart carrer websites for find new jobs that matches keywords.
 
 ## Notes
 Documentation:  
@@ -25,8 +28,11 @@ se contiene testo allora invia una email con lo script email come notifica
 uno script generale chiama il primo prg, poi il secondo e termina  
   
 
-## Install
-pip install > beautifulsoup4  
+## Dependencies
+Need BeatifulSoup for scraping
+<pre>
+pip install beautifulsoup4
+</pre>
   
 ToDo:  
 -valutare installazione su Docker dedicato a scripp  

@@ -5,6 +5,8 @@ __pycache__/
 *.log
 
 # Ignore temporary files
+*.json
+*.txt
 *.tmp
 *.swp
 
