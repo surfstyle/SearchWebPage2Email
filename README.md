@@ -1,17 +1,17 @@
   
 # SearchWebPages2Email
-Web scaping of a website, search lines with specific keywords, notification (email) of new content. 
-  
-It's personalized for more website using a configuration of a file .json (website + keywords)
+The main scope is scraping not-complex websites that periodically update content (like posts) for finding taget keywords.  
+The script collect data from a webpage, trasform html into text, search lines with specific keywords, notify (email) of new content.  
 
-The main scope is scraping not-smart carrer websites for find new jobs that matches keywords.
+  
+Note: the scraping can be made on simple webpages where the main content is captured in a simple body. You can see the scraped output in a file.txt and then opt if you can search correctly your keywords inside it.
+  
 
 ## How is working
-- Every scraping of a website is configured in a .json file (url, keywords, outputfile ...). You can create multiple .json
+- Every scraping of a website is configured in a .json file (url, keywords, outputfile ...). You can create multiple .json for multiple sites.
 - The single scraping return the data of the page. Then a search rescues the lines that matches the keywords. For every line founded are saved also the previous and next 2 lines for giving a context to the search
 - The result from the scraping is notified to an email
   
-Note: the scraping can be made on simple webpages where the main content is captured in a simple body. You can see the output of scraped in a file.txt and then opt if can search correctly your keywords inside this.
   
   
 ## How to use
