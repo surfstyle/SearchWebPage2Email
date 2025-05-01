@@ -6,36 +6,80 @@ It's personalized for more website using a configuration of a file .json (websit
 
 The main scope is scraping not-smart carrer websites for find new jobs that matches keywords.
 
-## Notes
-Documentation:  
+## How is working
+- Every scraping of a website is configured in a .json file (url, keywords, outputfile ...). You can create multiple .json
+- The single scraping return the data of the page. Then a search rescues the lines that matches the keywords. For every line founded are saved also the previous and next 2 lines for giving a context to the search
+- The result from the scraping is notified to an email
   
-Esiste un file json con dei parametri perche' il programma sia parametrizzabile e modulabile.  
-Il programma di lancio deve leggere i parametri e chiamare gli altri con i parametri letti.  
-Il programma di ricerca recupero il testo della pagina url ed esegue al suo interno una ricerca per delle keywords. Per ogni keyword trovata copia le precedenti e seguenti 2 righe in un file di testo txt.  
-Il programma di notifica prepara una email con FROM, TO, e un SUBJECT passato come parametro. Il body è letto dal file prodotto dal programma di ricerca. Invia la email.  
+Note: the scraping can be made on simple webpages where the main content is captured in a simple body. You can see the output of scraped in a file.txt and then opt if can search correctly your keywords inside this.
   
   
-1) script che esegue un recupero della pagina web   
-lo script è parametrizzato in modo che i parametri sono passati in un filetxt con la chiamata script  
-Es. eseguo un cron schedulato di time mioScript.py config-XYZ.txt  
-permette la riusabilita dello script  
-la pagina web viene recuperata, ci si appoggia alla libreria BeautifulSoup per convertire l html in testo  
-il testo viene scandagliato per cercare le keywords passate come parametri  
-per ogni key viene salvato le precedenti e successive 2 righe  
-tutte le ricerche vengono salvate in un file txt il cui nome è nel config  
-2) dal file txxt un programma legge il file, se vuoto non esegue niente  
-se contiene testo allora invia una email con lo script email come notifica  
-uno script generale chiama il primo prg, poi il secondo e termina  
-  
-
-## Dependencies
-Need BeatifulSoup for scraping
+## How to use
+### Dependencies
+Need BeatifulSoup for converting html to text
 <pre>
 pip install beautifulsoup4
 </pre>
   
-ToDo:  
--valutare installazione su Docker dedicato a scripp  
+  
+### Creating file .env
+Create a file *.env"*
+<pre>
+# .env
+
+# General
+APP_PATH=/home/headless/Scripts/SearchWebPage2Email/
+
+# Email
+APP_SMTP_SERVER=smtp.gmail.com
+APP_SMTP_PORT=587
+APP_SMTP_USERNAME=myaddress@gmail.com
+APP_SMTP_PASSWORD=nngg gghh iioo lkjh
+</pre>
+  
+  
+### Configuring website
+Every site is configured in a file .json
+Rename the file *_site1-example.json-test* in *_website-1.json*
+
+Personalized your research
+<pre>
+{
+  "URL": "https://www.myurl.com/something/other",
+  "KEYWORDS": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "OUTPUT_FILE": "res_myurl.txt",
+  "EMAIL-FROM": "test@test.it",
+  "EMAIL-TO": "metest@test.it",
+  "EMAIL-SUBJECT": "[HomeSrv] My search for www.myurl.com"
+}
+</pre>
+  
+  
+
+#### Run it the first time
+<pre>
+cd /home/me/Scripts/SearchWebPage2Email
+</pre>
+
+start
+<pre>
+python /home/me/Scripts/SearchWebPage2Email/launch_program.py _website-1.json
+</pre>pre>
 
   
-  
+#### Schedule your script
+Edit *crontab -e*
+with your script many time as the many website you want to scrap
+<pre>
+*# Scraping site-1 for searching something*
+40 00 * * 6 python /home/me/Scripts/SearchWebPage2Email/launch_program.py _website-1.json
+*# Scraping site-2 for searching someother*
+45 00 * * 6 python /home/me/Scripts/SearchWebPage2Email/launch_program.py _website-2.json
+*# Scraping site-3 for searching somenew*
+50 00 * * 6 python /home/me/Scripts/SearchWebPage2Email/launch_program.py _website-3.json
+# ....
+</pre>
