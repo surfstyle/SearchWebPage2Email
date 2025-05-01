@@ -1,19 +1,10 @@
   
-# InfoLavoroBs
+# SearchWebPages2Email
 Web scaping notification for general web site configured in .json
   
-  
-
-
-
 
 ## Notes
-pip install > beautifulsoup4  
-  
-ToDo:  
--valutare installazione su Docker dedicato a scripp  
-  
-Documentation (Generic):  
+Documentation:  
   
 Esiste un file json con dei parametri perche' il programma sia parametrizzabile e modulabile.  
 Il programma di lancio deve leggere i parametri e chiamare gli altri con i parametri letti.  
@@ -34,4 +25,11 @@ se contiene testo allora invia una email con lo script email come notifica
 uno script generale chiama il primo prg, poi il secondo e termina  
   
 
+## Install
+pip install > beautifulsoup4  
+  
+ToDo:  
+-valutare installazione su Docker dedicato a scripp  
 
+  
+  
