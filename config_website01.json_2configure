@@ -1,0 +1,12 @@
+{
+  "URL": "https://www.myurl.com",
+  "KEYWORDS": [
+    "keyword1",
+    "keyword2",
+    "keyword3"
+  ],
+  "OUTPUT_FILE": "res_wwwmyurl.txt",
+  "EMAIL-FROM": "test@test.it",
+  "EMAIL-TO": "metest@test.it",
+  "EMAIL-SUBJECT": "[HomeSrv] My search for www.myurl.com"
+}

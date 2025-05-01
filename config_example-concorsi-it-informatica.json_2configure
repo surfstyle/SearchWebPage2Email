@@ -1,0 +1,14 @@
+{
+  "URL": "https://www.concorsi.it/nc/risultatiente/ric/comun",
+  "KEYWORDS": [
+    "roma",
+    "milano",
+    "torino",
+    "padova",
+    "brescia"
+  ],
+  "OUTPUT_FILE": "res_concorsi-it-comuni.txt",
+  "EMAIL-FROM": "myaddress@gmail.com",
+  "EMAIL-TO": "destination@gmail.com",
+  "EMAIL-SUBJECT": "[HomeSrv] Concorsi.it Comunali"
+}
