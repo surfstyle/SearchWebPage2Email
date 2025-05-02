@@ -4,7 +4,7 @@ The main scope is scraping not-complex websites that periodically update content
 The script collect data from a webpage, trasform html into text, search lines with specific keywords, notify (email) of new content.  
 
   
-Note: the scraping can be made on simple webpages where the main content is captured in a simple body. You can see the scraped output in a file.txt and then opt if you can search correctly your keywords inside it.
+Note: the scraping can be made on simple webpages where the main content is inside a simple body. You can test the scraped output in a saved file .txt and then opt if you can search correctly your keywords inside it.
   
 
 ## How is working
@@ -34,7 +34,7 @@ APP_PATH=/home/headless/Scripts/SearchWebPage2Email/
 APP_SMTP_SERVER=smtp.gmail.com
 APP_SMTP_PORT=587
 APP_SMTP_USERNAME=myaddress@gmail.com
-APP_SMTP_PASSWORD=nngg gghh iioo lkjh
+APP_SMTP_PASSWORD=aaaa bbbb cccc dddd
 </pre>
   
   
@@ -47,13 +47,13 @@ Personalized your research
 {
   "URL": "https://www.myurl.com/something/other",
   "KEYWORDS": [
-    "keyword1",
-    "keyword2",
-    "keyword3"
+    "word1",
+    "word2",
+    "word3"
   ],
   "OUTPUT_FILE": "res_myurl.txt",
-  "EMAIL-FROM": "test@test.it",
-  "EMAIL-TO": "metest@test.it",
+  "EMAIL-FROM": "myaddress@gmail.com",
+  "EMAIL-TO": "address@gmail.com",
   "EMAIL-SUBJECT": "[HomeSrv] My search for www.myurl.com"
 }
 </pre>
@@ -65,7 +65,7 @@ Personalized your research
 cd /home/me/Scripts/SearchWebPage2Email
 </pre>
 
-start
+start the script
 <pre>
 python /home/me/Scripts/SearchWebPage2Email/launch_program.py _website-1.json
 </pre>pre>
@@ -79,7 +79,5 @@ with your script many time as the many website you want to scrap
 40 00 * * 6 python /home/me/Scripts/SearchWebPage2Email/launch_program.py _website-1.json
 *# Scraping site-2 for searching someother*
 45 00 * * 6 python /home/me/Scripts/SearchWebPage2Email/launch_program.py _website-2.json
-*# Scraping site-3 for searching somenew*
-50 00 * * 6 python /home/me/Scripts/SearchWebPage2Email/launch_program.py _website-3.json
 # ....
 </pre>
