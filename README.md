@@ -1,6 +1,6 @@
   
 # SearchWebPages2Email
-The main scope is scraping **not-complex websites** that periodically update content (like posts) for finding taget keywords. 
+The main scope is scraping **not-complex websites** that periodically update content (like posts) for finding target keywords. 
 The script collect data from a webpage, trasform html into text, search lines with specific keywords, notify (email) of new content.  
 
   
