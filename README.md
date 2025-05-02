@@ -1,10 +1,10 @@
   
 # SearchWebPages2Email
-The main scope is scraping not-complex websites that periodically update content (like posts) for finding taget keywords. 
+The main scope is scraping **not-complex websites** that periodically update content (like posts) for finding taget keywords. 
 The script collect data from a webpage, trasform html into text, search lines with specific keywords, notify (email) of new content.  
 
   
-Note: the scraping can be made on **simple webpages** where the main content is inside a simple body. You can test the scraped output in a saved file .txt and then opt if you can search correctly your keywords inside it.
+Advice: The scraping can be made on **simple webpages** where the main content is inside a simple body. You can test the scraped output in a saved file .txt and then opt if you can search correctly your keywords inside it.
   
 
 ## How is working
@@ -39,8 +39,8 @@ APP_SMTP_PASSWORD=aaaa bbbb cccc dddd
   
   
 ### Configuring website
-Every site is configured in a file .json
-Rename the file *"_site1-example.json-test"* in *"_website-1.json"*
+Every site is configured in a file .json  
+Rename the file *"_site1-example.json-test"* in *"_website-1.json"*  
 Then personalize it
 <pre>
 {
