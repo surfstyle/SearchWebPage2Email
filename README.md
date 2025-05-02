@@ -4,7 +4,7 @@ The main scope is scraping **not-complex websites** that periodically update con
 The script collect data from a webpage, trasform html into text, search lines with specific keywords, notify (email) of new content.  
 
   
-Advice: The scraping can be made on **simple webpages** where the main content is inside a simple body. You can test the scraped output in a saved file .txt and then opt if you can search correctly your keywords inside it.
+Advice: The scraping can be made on **simple webpages** where the main content is inside a simple body. Increasing the complexity of the website, is more difficult to have a correct scrape. You can test the scraped output in a saved file .txt and then opt if you can search correctly your keywords inside it.
   
 
 ## How is working
