@@ -23,7 +23,7 @@ pip install beautifulsoup4
   
   
 ### Creating file .env
-Create a file *.env"*
+Create inside the folder a file *.env*
 <pre>
 # .env
 
@@ -40,9 +40,8 @@ APP_SMTP_PASSWORD=aaaa bbbb cccc dddd
   
 ### Configuring website
 Every site is configured in a file .json
-Rename the file *_site1-example.json-test* in *_website-1.json*
-
-Personalized your research
+Rename the file *"_site1-example.json-test"* in *"_website-1.json"*
+Then personalize it
 <pre>
 {
   "URL": "https://www.myurl.com/something/other",
@@ -65,10 +64,10 @@ Personalized your research
 cd /home/me/Scripts/SearchWebPage2Email
 </pre>
 
-start the script
+then start
 <pre>
 python /home/me/Scripts/SearchWebPage2Email/launch_program.py _website-1.json
-</pre>pre>
+</pre>
 
   
 #### Schedule your script
