@@ -26,7 +26,7 @@ def read_config(file_path):
 
 def main():
     if len(sys.argv) != 2:
-        logging.error("Usage: python lanch_program.py <config_xyz>")
+        logging.error("Usage: python start.py <config_xyz>")
         sys.exit(1)
 
     config_file = sys.argv[1]
@@ -41,8 +41,8 @@ def main():
         email_subject = config.get('EMAIL-SUBJECT')
 
         if url and keywords and output_file and email_from and email_to and email_subject:
-            subprocess.run(['python3', PATH+'search_program.py', url, ','.join(keywords), output_file])
-            subprocess.run(['python3', PATH+'notification_program.py', email_from, email_to, email_subject, output_file, url])
+            subprocess.run(['python3', PATH+'search.py', url, ','.join(keywords), output_file])
+            subprocess.run(['python3', PATH+'notify.py', email_from, email_to, email_subject, output_file, url])
         else:
             logging.error("Configuration file is missing required fields.")
     else:

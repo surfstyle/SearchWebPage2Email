@@ -28,7 +28,7 @@ Create inside the folder a file *.env*
 # .env
 
 # General
-APP_PATH=/home/headless/Scripts/SearchWebPage2Email/
+APP_PATH=/home/me/Scripts/SearchWebPage2Email/
 
 # Email
 APP_SMTP_SERVER=smtp.gmail.com
@@ -66,7 +66,7 @@ cd /home/me/Scripts/SearchWebPage2Email
 
 then start
 <pre>
-python /home/me/Scripts/SearchWebPage2Email/launch_program.py _website-1.json
+python /home/me/Scripts/SearchWebPage2Email/start.py _website-1.json
 </pre>
 
   
@@ -75,8 +75,8 @@ Edit *crontab -e*
 with your script many time as the many website you want to scrap
 <pre>
 *# Scraping site-1 for searching something*
-40 00 * * 6 python /home/me/Scripts/SearchWebPage2Email/launch_program.py _website-1.json
+40 00 * * 6 python /home/me/Scripts/SearchWebPage2Email/start.py _website-1.json
 *# Scraping site-2 for searching someother*
-45 00 * * 6 python /home/me/Scripts/SearchWebPage2Email/launch_program.py _website-2.json
+45 00 * * 6 python /home/me/Scripts/SearchWebPage2Email/start.py _website-2.json
 # ....
 </pre>

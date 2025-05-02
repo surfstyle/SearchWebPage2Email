@@ -50,7 +50,7 @@ def leggi_file_e_invia_email(file_path, destinatario, mittente, soggetto, smtp_u
 
 def main():
     if len(sys.argv) != 6:
-        logging.error("Usage: python notification_program.py <email_from> <email_to> <email_subject> <file_path> <url>")
+        logging.error("Usage: python notify.py <email_from> <email_to> <email_subject> <file_path> <url>")
         sys.exit(1)
 
     email_from = sys.argv[1]

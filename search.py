@@ -48,7 +48,7 @@ def save_results_to_file(results, file_path):
 
 def main():
     if len(sys.argv) != 4:
-        logging.error("Usage: python search_program.py <url> <keywords> <output_file>")
+        logging.error("Usage: python search.py <url> <keywords> <output_file>")
         sys.exit(1)
 
     url = sys.argv[1]
